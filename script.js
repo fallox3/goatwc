@@ -27,7 +27,6 @@ function f1(){
     }
     
     let month = (theday, today) =>{
-        //let time = today.getTime() - theday.getTime();
         let total = (today.getFullYear() - theday.getFullYear()) * 12;
         total -= theday.getMonth();
         total += today.getMonth();
@@ -38,7 +37,7 @@ function f1(){
         let time = (today.getFullYear() - theday.getFullYear()) * 12;
         time -= theday.getMonth();
         time += today.getMonth();
-        let total = Math.ceil(time / 12);
+        let total = Math.floor(time / 12);
         return total;
     }
 
@@ -46,8 +45,8 @@ function f1(){
     document.querySelector("#min").innerHTML = min(theday, today) + " minut";
     document.querySelector("#hour").innerHTML = hour(theday, today) + " godzin";
     document.querySelector("#day").innerHTML = day(theday, today) + " dni";
-    document.querySelector("#month").innerHTML = day(theday, today) + " miesięcy";
-    document.querySelector("#year").innerHTML = day(theday, today) + " lat";
+    document.querySelector("#month").innerHTML = month(theday, today) + " miesięcy";
+    document.querySelector("#year").innerHTML = year(theday, today) + " lat";
 }
 f1();
 window.setInterval("f1()", 1000);
