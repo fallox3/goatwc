@@ -3,10 +3,11 @@ body
     width: 100%;
     height: 200%;
     margin: 0;
-    background-image: url(./goat.jpg);
+    background-image: url("./goat.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-positon: center;
     display: flex;
     justify-content: center;
     margin-top: 10vh;
