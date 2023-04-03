@@ -44,6 +44,8 @@ function f1(){
         let total = (today.getFullYear() - theday.getFullYear()) * 12;
         total -= theday.getMonth();
         total += today.getMonth();
+        if (today.getDate() < theday.getDate())
+            total -= 1;
         if (total == 1)
             return total + " miesiąc";
         if (total > 1 && total < 5)
