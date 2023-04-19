@@ -13,6 +13,33 @@ body
     margin-top: 10vh;
 }
 
+.loader
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #18122B;
+}
+
+.loader-active
+{
+    display: flex;
+}
+
+#trophy
+{
+    animation: 2s linear loader-anim;
+}
+
+@keyframes loader-anim {
+    to{transform: rotate(360deg);}
+}
+
 #container
 {
     width: 60vh;
