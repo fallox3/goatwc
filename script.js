@@ -1,3 +1,13 @@
+window.addEventListener("load", () =>
+{
+    let loader_function = () => 
+    {
+        document.querySelector(".loader").classList.remove("loader-active");
+    };
+    setInterval(loader_function, 2300);
+    
+});
+
 function f1(){
     let theday = new Date('12/18/2022 21:41:00');
     let today = new Date();
