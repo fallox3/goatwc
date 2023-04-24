@@ -1,15 +1,15 @@
+let loader_function = () => 
+{
+    document.querySelector(".loader").classList.add("loader-hidden");
+};
 window.addEventListener("load", () =>
 {
-    let loader_function = () => 
-    {
-        document.querySelector(".loader").classList.remove("loader-active");
-    };
-    setInterval(loader_function, 2300);
-    
+    loader_function();
 });
 
 function f1(){
-    let theday = new Date('12/18/2022 21:41:00');
+    let theday = new Date('12/18/2022 19:41:00');
+    let thegoodday = new Date ('12/10/2022 17:55:00');
     let today = new Date();
 
     let sec = (theday, today) =>{
@@ -75,12 +75,18 @@ function f1(){
         return total + " lat";
     }
 
-    document.querySelector("#sec").innerHTML = sec(theday, today);
-    document.querySelector("#min").innerHTML = min(theday, today);
-    document.querySelector("#hour").innerHTML = hour(theday, today);
-    document.querySelector("#day").innerHTML = day(theday, today);
-    document.querySelector("#month").innerHTML = month(theday, today);
-    document.querySelector("#year").innerHTML = year(theday, today);
+    document.querySelector("#a-sec").innerHTML = sec(theday, today);
+    document.querySelector("#a-min").innerHTML = min(theday, today);
+    document.querySelector("#a-hour").innerHTML = hour(theday, today);
+    document.querySelector("#a-day").innerHTML = day(theday, today);
+    document.querySelector("#a-month").innerHTML = month(theday, today);
+    document.querySelector("#a-year").innerHTML = year(theday, today);
+    document.querySelector("#p-sec").innerHTML = sec(thegoodday, today);
+    document.querySelector("#p-min").innerHTML = min(thegoodday, today);
+    document.querySelector("#p-hour").innerHTML = hour(thegoodday, today);
+    document.querySelector("#p-day").innerHTML = day(thegoodday, today);
+    document.querySelector("#p-month").innerHTML = month(thegoodday, today);
+    document.querySelector("#p-year").innerHTML = year(thegoodday, today);
 }
 f1();
 window.setInterval("f1()", 1000);
